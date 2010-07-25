@@ -2,7 +2,7 @@
 Copyright 2010
 Vladimir V. Slavin
 BSD MileyCyrus Licence
-Requires jQuery, however there are only it's so small 
+Requires jQuery, however it's so small 
 that one can rewrite it without easily.
 http://slavin.tv
 */
@@ -16,7 +16,7 @@ var options = {
 		$(".reports").append("<li> #" + image_id + ": " + image_left + " " + image_top + "</li>");
 	 } // do whatever you want with the data
 };
-
+(function() {
 $("img").load(function() {
 	var pic = $(this);
 	
@@ -48,3 +48,4 @@ $("img").load(function() {
 		options.save(pic_item.attr("id"),left+options.offset_x,top+options.offset_y);
 	});
 });
+})();
